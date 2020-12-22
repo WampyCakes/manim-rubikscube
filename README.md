@@ -32,7 +32,7 @@ This plugin for [Manim Community Edition](https://www.manim.community/) provides
 
 
 # Installation
-This plugins is [available on PyPi](https://pypi.org/project/manim-rubikscube/)
+This plugin is [available on PyPi](https://pypi.org/project/manim-rubikscube/)
 
 To install the RubiksCube plugin run:
 ```
@@ -540,4 +540,9 @@ None
 * [Herbert Kociemba's Two Phase Rubik's Cube Solving Algorithm](https://github.com/hkociemba/RubiksCube-TwophaseSolver)
 
 # License
-This plugin is licensed under the MIT license ([see LICENSE file](https://github.com/WampyCakes/manim-rubikscube/blob/main/LICENSE)).
+This plugin is licensed under the GPLv3.0 license ([see LICENSE file](https://github.com/WampyCakes/manim-rubikscube/blob/main/LICENSE)) due to the incorporation of Kociemba's algorithm.
+
+As per the license, changes made to Kociemba's source are:
+* Removing anything unnecessary such as examples, GUI, vision, and server files
+* Commenting out print statements
+* Changing import statements
