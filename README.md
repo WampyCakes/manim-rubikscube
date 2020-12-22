@@ -532,6 +532,8 @@ manim solve_example.py BBFBUBUDFDDUURDDURLLLDFRBFRLLFFDLUFBDUBBLFFUDLRRRBLURR -p
 None
 
 # Release Notes
+* 0.0.7
+    * Change license to be in accordance with Kociemba's algorithm
 * 0.0.6 
     * Initial release (thanks a lot PyPi for not allowing name reuse...)
 
