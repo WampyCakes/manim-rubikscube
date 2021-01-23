@@ -32,19 +32,20 @@ This plugin for [Manim Community Edition](https://www.manim.community/) provides
 
 
 # Installation
-This plugin is [available on PyPi](https://pypi.org/project/manim-rubikscube/)
+This plugin is [available on PyPi.](https://pypi.org/project/manim-rubikscube/)
+Usage of this plugin assumes that Python and Manim are both correctly installed. Manim is listed as a dependency, but no version is specified. This is because the plugin will work with any version of ManimCE that does not have breaking changes to the plugin. Some releases of this plugin have been tested with certain versions of Manim. To see what versions of Manim are compatible with this plugin, [see Releases.](https://github.com/WampyCakes/manim-rubikscube/releases)
 
 To install the RubiksCube plugin run:
 ```
 pip install manim-rubikscube
 ```
 
-Alternatively, the [Github repo](https://github.com/WampyCakes/manim-rubikscube) can be cloned and imported to your manim scripts as normal. Currently, this option will give import errors, but these errors can be manually fixed after cloning.
+Alternatively, the Github repository can be cloned and imported to your manim scripts as normal. Currently, this option will give import errors, but these errors can be manually fixed after cloning.
 
 # Importing
 To use the RubiksCube, you can either:
-* `from manim_rubikscube.cube import RubiksCube`
-* Follow the [manim steps for using plugins](https://docs.manim.community/en/latest/installation/plugins.html#using-plugins-in-projects)
+* `from manim_rubikscube import *`
+* Follow the [Manim steps for using plugins](https://docs.manim.community/en/latest/installation/plugins.html#using-plugins-in-projects)
 
 Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
 
@@ -53,7 +54,7 @@ Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
 ```python
 from manim import *
 # Import the RubiksCube from the plugin after `pip install manim-rubikscube`
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class FadeInExample(ThreeDScene):
     def construct(self):
@@ -83,7 +84,7 @@ At this point, you have created a RubiksCube object. All that's left is to add i
 ## Changing the colors of a RubiksCube
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class ColorExample(ThreeDScene):
     def construct(self):
@@ -108,7 +109,7 @@ class ColorExample(ThreeDScene):
 When you have a RubiksCube in real life and want to replicate it in manim, the `set_state()` method enables this functionality. Or, if you know the state of any cube without knowing what movements got it to that point, this method allows you to replicate it regardless.
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class StateExample(ThreeDScene):
     def construct(self):
@@ -180,7 +181,7 @@ To this point, we have seen that one property of a RubiksCube is a list of color
 #### 2-Dimensional RubiksCube
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class TwoDExample(ThreeDScene):
     def construct(self):
@@ -224,7 +225,7 @@ class TwoDStateExample(ThreeDScene):
 > **_WARNING:_**  While the plugin can create RubiksCubes with large dimensions, it takes a long time to render and your computer may hate you forever.
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class TenDExample(ThreeDScene):
     def construct(self):
@@ -254,7 +255,7 @@ The default value for all three offsets is `2.1`. Adjusting these offsets change
 #### Offsets of 3
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class ThreeOffsetExample(ThreeDScene):
     def construct(self):
@@ -277,7 +278,7 @@ class ThreeOffsetExample(ThreeDScene):
 #### y_offset of 4
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class YOffsetExample(ThreeDScene):
     def construct(self):
@@ -329,7 +330,7 @@ Each "level" in the array represents a coordinate. Each of the first three array
 So, to access the Cubie at coordinates X=0, Y=0, Z=0, `cube.cubies[0, 0, 0]` will return it. This holds true no matter the dimension of the RubiksCube.
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class IndicateCubieExample(ThreeDScene):
     def construct(self):
@@ -358,7 +359,7 @@ The RubiksCube has a method called `get_face()` that will return an array of Cub
 Because the front face of the RubiksCube has an X value of 0 (regardless of the dimension of the cube), returning all Cubies with an X value of 0 will give you the front face. When `cube.get_face("F")` is called, it is effectively returning `cube.cubies[0, :, :]`. This is possible for all 6 faces of the RubiksCube, and it can also be used manually to return more than just one "slice" of a RubiksCube at a time. This is achievable with [numpy indexing](https://numpy.org/doc/stable/reference/arrays.indexing.html).
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class IndicateFaceExample(ThreeDScene):
     def construct(self):
@@ -392,9 +393,7 @@ There are currently two ways to do a rotation of the RubiksCube. The recommended
 ### CubeMove animation - Recommended
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
-# Calling RubiksCube animations requires importing them
-from manim_rubikscube.cube_animations import CubeMove
+from manim_rubikscube import *
 
 class RecommendedMoveExample(ThreeDScene):
     def construct(self):
@@ -425,9 +424,7 @@ class RecommendedMoveExample(ThreeDScene):
 ### MoveCube animation - Less recommended
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
-# Calling RubiksCube animations requires importing them
-from manim_rubikscube.cube_animations import MoveCube
+from manim_rubikscube import *
 
 class SecondMoveExample(ThreeDScene):
     def construct(self):
@@ -461,7 +458,7 @@ class SecondMoveExample(ThreeDScene):
 This implementation of a RubiksCube also includes [Kociemba's algorithm](https://github.com/hkociemba/RubiksCube-TwophaseSolver), a brilliantly fast solving algorithm made by Herbert Kociemba. The RubiksCube object includes the method `solve_by_kociemba()`. Given a state, it will return a list of moves to perform. Solving is only possible for 3-dimensional cubes. Solving any other size RubiksCube will require hardcoding of the moves to perform. Currently, `solve_by_kociemba()` requires a state string to solve (like the one used in `set_state()`). In the future, this will be replaced with using the state of the cube without having to manually input the state of the cube.
 ```python
 from manim import *
-from manim_rubikscube.cube import RubiksCube
+from manim_rubikscube import *
 
 class SolveExample(ThreeDScene):
     def construct(self):
@@ -478,10 +475,8 @@ solve_by_kociemba() returned:
 ```python
 from manim import *
 import sys
-# Import the RubiksCube
-from manim_rubikscube.cube import RubiksCube
-# Import the animation
-from manim_rubikscube.cube_animations import CubeMove
+# Import the RubiksCube and animations
+from manim_rubikscube import *
 
 class AllTogetherExample(ThreeDScene):
     def construct(self):
@@ -532,9 +527,7 @@ manim solve_example.py BBFBUBUDFDDUURDDURLLLDFRBFRLLFFDLUFBDUBBLFFUDLRRRBLURR -p
 None
 
 # Release Notes
-* 0.0.7
-    * Change license to be in accordance with Kociemba's algorithm
-* 0.0.6 
+* 0.0.8
     * Initial release (thanks a lot PyPi for not allowing name reuse...)
 
 # Acknowledgments
