@@ -74,7 +74,13 @@ html_theme = 'furo'
 html_logo = '_static/logo.png'
 html_favicon = '_static/logo.ico'
 
+if not os.path.exists('media/images'):
+    os.makedirs('media/images')
+
+if not os.path.exists('media/videos'):
+    os.makedirs('media/videos')
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static', 'media/images']
+html_static_path = ['_static', 'media/images', 'media/videos']
