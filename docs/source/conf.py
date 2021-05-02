@@ -27,9 +27,9 @@ if os.environ.get("READTHEDOCS") == "True":
     [ffmpeg_bin] = [
         file for file in os.listdir(ffmpeg_path) if file.startswith("ffmpeg-")
     ]
-    os.symlink(
-        os.path.join(ffmpeg_path, ffmpeg_bin), os.path.join(ffmpeg_path, "ffmpeg")
-    )
+    # os.symlink(
+    #     os.path.join(ffmpeg_path, ffmpeg_bin), os.path.join(ffmpeg_path, "ffmpeg")
+    # )
     os.environ["PATH"] += os.pathsep + ffmpeg_path
 
 # -- Project information -----------------------------------------------------
