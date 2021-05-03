@@ -64,7 +64,7 @@ from docutils.statemachine import StringList
 
 from manim import QUALITIES
 
-from manim_rubikscube import *
+from . import manim_rubikscube
 
 classnamedict = {}
 
