@@ -6,6 +6,9 @@ license = "GNU General Public License v3 (GPLv3)"
 authors = ["KingWampy <none@ya.business>"]
 readme = "README.rst"
 repository = "https://github.com/WampyCakes/manim-rubikscube"
+packages = [
+    { include = "manim_rubikscube" },
+]
 
 [tool.poetry.plugins."manim.plugins"]
 "manim_rubikscube" = "manim_rubikscube"
