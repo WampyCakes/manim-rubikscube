@@ -217,15 +217,16 @@ class ManimDirective(Directive):
             filename = f"{output_file}.mp4"
             filesrc = config.get_dir("video_dir") / filename
             destfile = os.path.join(dest_dir, filename)
-            shutil.copyfile(filesrc, destfile)
+            # print(filename, filesrc, destfile)
+            # shutil.copyfile(filesrc, destfile)
         elif save_as_gif:
             filename = f"{output_file}.gif"
             filesrc = config.get_dir("video_dir") / filename
         elif save_last_frame:
-            print("output file:", output_file)
+            # print("output file:", output_file)
             filename = f"{output_file}.png"
             filesrc = config.get_dir("images_dir") / filename
-            print(filesrc)
+            # print(filesrc)
         else:
             raise ValueError("Invalid combination of render flags received.")
 
@@ -266,12 +267,14 @@ def setup(app):
 TEMPLATE = r"""
 {% if not hide_source %}
 .. raw:: html
+
     <div id="{{ clsname_lowercase }}" class="admonition admonition-manim-example">
-    <p class="admonition-title">Example: {{ clsname }} <a class="headerlink" href="#{{ clsname_lowercase }}">¶</a></p>
+    <p class="admonition-title">{{ clsname }} <a class="headerlink" href="#{{ clsname_lowercase }}">¶</a></p>
 {% endif %}
 {% if not (save_as_gif or save_last_frame) %}
 .. raw:: html
-    <video class="manim-video" controls loop autoplay src="./{{ output_file }}.mp4"></video>
+
+    <video class="manim-video" controls loop autoplay src="_static/{{ filename }}"></video>
 {% elif save_as_gif %}
 .. image:: /{{ filesrc_rel }}
     :align: center
@@ -284,5 +287,6 @@ TEMPLATE = r"""
 {{ ref_block }}
 {% endif %}
 .. raw:: html
+
     </div>
 """

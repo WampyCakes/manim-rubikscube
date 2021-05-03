@@ -13,11 +13,11 @@
 import os
 import sys
 from distutils.sysconfig import get_python_lib
-from pathlib import Path
 
 sys.path.insert(0, os.path.abspath('.'))
 
 import manim
+import manim_rubikscube
 
 if os.environ.get("READTHEDOCS") == "True":
     site_path = get_python_lib()
@@ -39,7 +39,7 @@ copyright = '2021, KingWampy'
 author = 'KingWampy'
 
 # The full version, including alpha/beta/rc tags
-release = ''
+release = '0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -52,6 +52,8 @@ extensions = [
     # 'sphinx.ext.autodoc',
     # 'sphinx.ext.autosummary'
 ]
+
+pygments_style = 'material'
 
 # autosummary_generate = True
 # add_module_names = False
@@ -69,7 +71,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
+
+# html_title = f"Manim RubiksCube v{manim_rubikscube.__version__}"
 html_theme = 'furo'
 html_logo = '_static/logo.png'
 html_favicon = '_static/logo.ico'
@@ -83,4 +86,4 @@ if not os.path.exists('media/videos'):
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static', 'media/images', 'media/videos']
+html_static_path = ['_static', 'media/images', 'media/videos/480p30']
