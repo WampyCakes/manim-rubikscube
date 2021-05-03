@@ -64,6 +64,8 @@ from docutils.statemachine import StringList
 
 from manim import QUALITIES
 
+from manim_rubikscube import *
+
 classnamedict = {}
 
 
@@ -177,7 +179,7 @@ class ManimDirective(Directive):
         source_block = [
             ".. code-block:: python",
             "",
-            "    from manim import *\n",
+            "    from manim import *\n    from manim_rubikscube import *\n",
             *["    " + line for line in self.content],
         ]
         source_block = "\n".join(source_block)
