@@ -14,10 +14,10 @@ import os
 import sys
 from distutils.sysconfig import get_python_lib
 
-sys.path.insert(0, os.path.abspath('.'))
-
 import manim
-# import manim_rubikscube
+import manim_rubikscube
+
+sys.path.insert(0, os.path.abspath('.'))
 
 if os.environ.get("READTHEDOCS") == "True":
     site_path = get_python_lib()
