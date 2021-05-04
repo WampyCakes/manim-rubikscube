@@ -33,6 +33,8 @@ Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
 Examples
 ========
 
+|
+
 Creating a RubiksCube
 ---------------------
 

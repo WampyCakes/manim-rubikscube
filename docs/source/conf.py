@@ -80,8 +80,8 @@ html_favicon = '_static/logo.ico'
 if not os.path.exists('media/images'):
     os.makedirs('media/images')
 
-if not os.path.exists('media/videos'):
-    os.makedirs('media/videos')
+if not os.path.exists('media/videos/480p30'):
+    os.makedirs('media/videos/480p30')
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
