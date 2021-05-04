@@ -1,4 +1,4 @@
 sphinx==3.5.3
 furo==2021.3.20b30
 manim
-.
+manim_rubikscube
