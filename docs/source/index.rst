@@ -39,6 +39,7 @@ Creating a RubiksCube
 .. manim:: FadeInExample
 
     # Import the RubiksCube plugin after installing
+    from manim_rubikscube import *
 
     class FadeInExample(ThreeDScene):
         def construct(self):
@@ -75,6 +76,7 @@ Changing the colors of a RubiksCube
 
 .. manim:: ColorExample
 
+   from manim_rubikscube import *
 
    class ColorExample(ThreeDScene):
        def construct(self):
@@ -106,6 +108,7 @@ When you have a RubiksCube in real life and want to replicate it in manim, the `
 
 .. manim:: StateExample
 
+   from manim_rubikscube import *
 
    class StateExample(ThreeDScene):
        def construct(self):
@@ -192,6 +195,7 @@ Dimension
 
 .. manim:: TwoDimensionalExample
 
+   from manim_rubikscube import *
 
    class TwoDimensionalExample(ThreeDScene):
        def construct(self):
@@ -220,6 +224,7 @@ An example of ``set_state()`` on a non-3-dimensional cube:
 
 .. manim:: TwoDimensionalStateExample
 
+   from manim_rubikscube import *
 
    class TwoDimensionalStateExample(ThreeDScene):
        def construct(self):
@@ -252,6 +257,7 @@ An example of ``set_state()`` on a non-3-dimensional cube:
 .. manim:: TenDimensionalExample
     :save_last_frame:
 
+    from manim_rubikscube import *
 
     class TenDimensionalExample(ThreeDScene):
         def construct(self):
@@ -282,6 +288,7 @@ Offsets of 3
 ~~~~~~~~~~~~
 .. manim:: ThreeOffsetExample
 
+    from manim_rubikscube import *
 
     class ThreeOffsetExample(ThreeDScene):
         def construct(self):
@@ -310,6 +317,7 @@ y_offset of 4
 
 .. manim:: YOffsetExample
 
+   from manim_rubikscube import *
 
    class YOffsetExample(ThreeDScene):
        def construct(self):
@@ -375,6 +383,7 @@ So, to access the Cubie at coordinates X=0, Y=0, Z=0, ``cube.cubies[0, 0, 0]`` w
 
 .. manim:: IndicateCubieExample
 
+   from manim_rubikscube import *
 
    class IndicateCubieExample(ThreeDScene):
        def construct(self):
@@ -410,6 +419,7 @@ Because the front face of the RubiksCube has an X value of 0 (regardless of the 
 
 .. manim:: IndicateFaceExample
 
+   from manim_rubikscube import *
 
    class IndicateFaceExample(ThreeDScene):
        def construct(self):
@@ -455,6 +465,7 @@ CubeMove animation - Recommended
 
 .. manim:: RecommendedMoveExample
 
+   from manim_rubikscube import *
 
    class RecommendedMoveExample(ThreeDScene):
        def construct(self):
@@ -491,6 +502,7 @@ MoveCube animation - Less recommended
 
 .. manim:: SecondMoveExample
 
+   from manim_rubikscube import *
 
    class SecondMoveExample(ThreeDScene):
        def construct(self):
@@ -553,6 +565,7 @@ Putting it All Together
 .. manim:: AllTogetherExample
 
    # Import the RubiksCube plugin
+   from manim_rubikscube import *
 
    class AllTogetherExample(ThreeDScene):
        def construct(self):
