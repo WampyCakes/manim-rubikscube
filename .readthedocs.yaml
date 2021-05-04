@@ -7,5 +7,3 @@ python:
   install:
     - requirements: docs/rtd-requirements.txt
     - requirements: docs/requirements.txt
-    - method: pip
-      path: .
