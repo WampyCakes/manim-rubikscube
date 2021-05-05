@@ -15,7 +15,7 @@ corners_ud_edges_depth3 = None
 cornslice_depth = None
 edgeslice_depth = None
 
-relative_path = path.join(path.dirname(__file__), "tables/")
+relative_path = path.join(path.dirname(path.abspath(__file__)), "tables/")
 
 # ####################### functions to extract or set values in the pruning tables #####################################
 

@@ -8,7 +8,7 @@ from .defs import N_TWIST, N_FLIP, N_SLICE_SORTED, N_CORNERS, N_UD_EDGES, N_MOVE
 
 a = cb.CubieCube()
 
-relative_path = path.join(path.dirname(__file__), "tables/")
+relative_path = path.join(path.dirname(path.abspath(__file__)), "tables/")
 
 # ######################################### Move table for the twists of the corners. ##################################
 

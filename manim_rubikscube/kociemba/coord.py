@@ -14,7 +14,7 @@ from .enums import Edge as Ed
 SOLVED = 0  # 0 is index of solved state (except for u_edges coordinate)
 u_edges_plus_d_edges_to_ud_edges = None  # global variable
 
-relative_path = path.join(path.dirname(__file__), "tables/")
+relative_path = path.join(path.dirname(path.abspath(__file__)), "tables/")
 
 class CoordCube:
     """Represent a cube on the coordinate level.

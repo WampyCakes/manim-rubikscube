@@ -10,7 +10,7 @@ from .enums import Corner as Co, Edge as Ed, Move as Mv, BS
 
 INVALID = 65535
 
-relative_path = path.join(path.dirname(__file__), "tables/")
+relative_path = path.join(path.dirname(path.abspath(__file__)), "tables/")
 
 #  #################### Permutations and orientation changes of the basic symmetries ###################################
 
