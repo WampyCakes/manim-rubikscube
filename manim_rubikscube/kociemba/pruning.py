@@ -9,6 +9,7 @@ from . import cubie as cb
 from os import path
 import time
 import array as ar
+import numpy as np
 
 flipslice_twist_depth3 = None  # global variables, initialized during pruning table cration
 corners_ud_edges_depth3 = None
@@ -163,13 +164,15 @@ def create_phase1_prun_table():
             print()
             print('depth:', depth, 'done: ' + str(done) + '/' + str(total))
 
-        fh = open(fname, "wb")
-        flipslice_twist_depth3.tofile(fh)
+        with open(fname, "wb") as fh:
+            np.save(fh, flipslice_twist_depth3, allow_pickle=False)
+            fh.close()
     else:
         # print("loading " + fname + " table...")
-        fh = open(fname, "rb")
         flipslice_twist_depth3 = ar.array('L')
-        flipslice_twist_depth3.fromfile(fh, total // 16 + 1)
+        with open(fname, "rb") as fh:
+            flipslice_twist_depth3 = np.load(fh, allow_pickle=False)
+            #.fromfile(fh, total // 16 + 1)
     fh.close()
 
 
