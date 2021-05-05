@@ -1,6 +1,4 @@
 version: 2
-formats: 
-  - htmlzip
 
 python:
   version: 3.7
