@@ -48,15 +48,15 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'manim_directive'
-    # 'sphinx.ext.autodoc',
-    # 'sphinx.ext.autosummary'
+    'manim_directive',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary'
 ]
 
 pygments_style = 'material'
 
-# autosummary_generate = True
-# add_module_names = False
+autosummary_generate = False
+add_module_names = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -76,6 +76,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'furo'
 html_logo = '_static/logo.png'
 html_favicon = '_static/logo.ico'
+
+html_css_files = ["custom.css"]
 
 if not os.path.exists('media/images'):
     os.makedirs('media/images')
