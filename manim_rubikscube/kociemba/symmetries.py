@@ -216,6 +216,7 @@ else:
     fh.close()
     fh = open(fname3, 'rb')
     flipslice_rep = ar.array('L')
+    print(fh.read())
     flipslice_rep.fromfile(fh, N_FLIPSLICE_CLASS)
     fh.close()
 ########################################################################################################################
