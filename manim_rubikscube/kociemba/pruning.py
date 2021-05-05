@@ -268,13 +268,14 @@ def create_phase2_prun_table():
             print('depth:', depth, 'done: ' + str(done) + '/' + str(total))
 
         print('remaining unfilled entries have depth >=11')
-        fh = open(fname, "wb")
-        corners_ud_edges_depth3.tofile(fh)
+        with open(fname, "wb") as fh:
+            np.save(fh, corners_ud_edges_depth3)# corners_ud_edges_depth3.tofile(fh)
     else:
         # print("loading " + fname + " table...")
-        fh = open(fname, "rb")
-        corners_ud_edges_depth3 = ar.array('L')
-        corners_ud_edges_depth3.fromfile(fh, total // 16)
+        with open(fname, "rb") as fh:
+            corners_ud_edges_depth3 = np.load(fh)
+            # corners_ud_edges_depth3 = ar.array('L')
+            # corners_ud_edges_depth3.fromfile(fh, total // 16)
 
     fh.close()
 
