@@ -199,9 +199,9 @@ if not (path.isfile(fname1) and path.isfile(fname2) and path.isfile(fname3)):
     fh = open(fname2, 'wb')
     flipslice_sym.tofile(fh)
     fh.close()
-    fh = open(fname3, 'wb')
-    flipslice_rep.tofile(fh)
-    fh.close()
+    with open(fname3, 'wb') as fh:
+        np.save(fh, flipslice_rep)
+        fh.close()
 
 else:
     # print("loading " + "flipslice sym-tables...")
@@ -214,11 +214,10 @@ else:
     flipslice_sym = ar.array('B')
     flipslice_sym.fromfile(fh, N_FLIP * N_SLICE)
     fh.close()
-    fh = open(fname3, 'rb')
     flipslice_rep = ar.array('L')
-    print(fh.read())
-    flipslice_rep.fromfile(fh, N_FLIPSLICE_CLASS)
-    fh.close()
+    with open(fname3, 'rb') as fh:
+        flipslice_rep = np.load(fh)
+        fh.close()
 ########################################################################################################################
 
 # ############ Generate the tables to handle the symmetry reduced corner permutation coordinate in phase 2 #############
