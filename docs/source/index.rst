@@ -1,5 +1,5 @@
-.. Manim RubiksCube
-.. ============================================
+Manim RubiksCube
+============================================
 
 .. .. include:: documentation.rst
 
@@ -621,9 +621,9 @@ Release Notes
 =============
 
 
-* 0.0.8
+* 0.1.0
 
-  * Initial release (thanks a lot PyPi for not allowing name reuse...)
+  * Initial release
 
 Acknowledgments
 ===============
@@ -640,9 +640,10 @@ This plugin is licensed under the GPLv3.0 license (\ `see LICENSE file <https://
 As per the license, changes made to Kociemba's source are:
 
 
-* Removing anything unnecessary such as examples, GUI, vision, and server files
-* Commenting out print statements
-* Changing import statements
+* Removed anything unnecessary such as examples, GUI, vision, and server files
+* Commented out print statements
+* Changed import statements
+* Changed the way tables are written and read to be OS-independent (avoiding ``EOFError: read() didn't return enough bytes``)
 
 
 .. .. toctree::

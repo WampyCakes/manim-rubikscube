@@ -3,7 +3,7 @@ from manim.mobject.mobject import Mobject
 from manim.mobject.types.vectorized_mobject import VMobject
 import numpy as np
 from .cubie import Cubie
-from .kociemba import solver as sv
+from kociemba import solver as sv
 
 class RubiksCube(VMobject):
     #If facing the Rubik's Cube, X goes Front to Back, Y goes Right to Left, Z goes Down to Up 

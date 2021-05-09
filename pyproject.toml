@@ -3,7 +3,7 @@ name = "manim-rubikscube"
 version = "0.1.0"
 description = "A Manim implementation of a Rubik's Cube"
 license = "GNU General Public License v3 (GPLv3)"
-authors = ["KingWampy <none@ya.business>"]
+authors = ["KingWampy <fake-noreply@email.com>"]
 readme = "README.rst"
 repository = "https://github.com/WampyCakes/manim-rubikscube"
 packages = [
@@ -15,6 +15,8 @@ packages = [
 
 [tool.poetry.dependencies]
 manim = "*"
+importlib-metadata = {version = "*", python = "<3.8"}
+kociemba = { git = "https://github.com/WampyCakes/kociemba.git", branch = "main" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
