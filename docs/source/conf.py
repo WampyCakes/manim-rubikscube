@@ -15,7 +15,7 @@ import sys
 from distutils.sysconfig import get_python_lib
 
 import manim
-# import manim_rubikscube
+from manim_rubikscube import __version__
 
 sys.path.insert(0, os.path.abspath('.'))
 
@@ -39,7 +39,7 @@ copyright = '2021, KingWampy'
 author = 'KingWampy'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = __version__
 
 
 # -- General configuration ---------------------------------------------------
@@ -48,9 +48,10 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'manim_directive',
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary'
+    'sphinx.ext.autosummary',
+    "sphinxext.opengraph",
+    'manim_directive'
 ]
 
 pygments_style = 'material'
@@ -72,12 +73,14 @@ if not os.path.exists('media/images'):
 if not os.path.exists('media/videos/480p30'):
     os.makedirs('media/videos/480p30')
 
+# opengraph settings
+ogp_image = "https://github.com/WampyCakes/manim-rubikscube/blob/main/docs/source/_static/logo.png"
+ogp_site_name = "Manim RubiksCube"
+ogp_site_url = "https://manim-rubikscube.readthedocs.io/en/stable/"
+
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-
-# html_title = f"Manim RubiksCube v{manim_rubikscube.__version__}"
+html_title = f"Manim RubiksCube v{__version__}"
 html_theme = 'furo'
 html_logo = '_static/logo.png'
 html_favicon = '_static/logo.ico'
