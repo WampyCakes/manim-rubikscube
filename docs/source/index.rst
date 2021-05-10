@@ -65,10 +65,6 @@ Creating a RubiksCube
              self.wait(8)
 
 
-.. .. image:: _static/FadeInExample.gif
-..    :target: _static/FadeInExample.gif
-..    :alt: FadeIn Example
-
 |
 
 Changing the colors of a RubiksCube
@@ -94,10 +90,6 @@ Changing the colors of a RubiksCube
            self.begin_ambient_camera_rotation(rate=0.5)
            self.wait(8)
 
-
-.. .. image:: _static/ColorExample.gif
-..    :target: _static/ColorExample.gif
-..    :alt: Color Example
 
 |
 
@@ -171,10 +163,6 @@ When you have a RubiksCube in real life and want to replicate it in manim, the `
            self.wait(8)
 
 
-.. .. image:: _static/StateExample.gif
-..    :target: _static/StateExample.gif
-..    :alt: State Example
-
 |
 
 Properties of a RubiksCube
@@ -214,10 +202,6 @@ Dimension
            self.wait(3)
 
 
-.. .. image:: _static/2DExample.gif
-..    :target: _static/2DExample.gif
-..    :alt: 2-dimensional Example
-
 |
 
 An example of ``set_state()`` on a non-3-dimensional cube:
@@ -242,10 +226,6 @@ An example of ``set_state()`` on a non-3-dimensional cube:
            self.wait(3)
 
 
-.. .. image:: _static/2DStateExample.gif
-..    :target: _static/2DStateExample.gif
-..    :alt: 2-dimensional State Example
-
 
 10-Dimensional RubiksCube
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,10 +247,6 @@ An example of ``set_state()`` on a non-3-dimensional cube:
 
             self.add(cube)
 
-
-.. .. image:: _static/TenDExample.gif
-..    :target: _static/TenDExample.gif
-..    :alt: 10-dimensional Example
 
 
 Offset
@@ -307,10 +283,6 @@ Offsets of 3
             self.wait(3)
 
 
-.. .. image:: _static/ThreeOffsetExample.gif
-..    :target: _static/ThreeOffsetExample.gif
-..    :alt: Three Offset Example
-
 |
 
 y_offset of 4
@@ -335,10 +307,6 @@ y_offset of 4
            self.begin_ambient_camera_rotation(rate=0.5)
            self.wait(3)
 
-
-.. .. image:: _static/YOffsetExample.gif
-..    :target: _static/YOffsetExample.gif
-..    :alt: Y Offset Example
 
 |
 
@@ -406,10 +374,6 @@ So, to access the Cubie at coordinates X=0, Y=0, Z=0, ``cube.cubies[0, 0, 0]`` w
            self.wait()
 
 
-.. .. image:: _static/IndicateCubieExample.gif
-..    :target: _static/IndicateCubieExample.gif
-..    :alt: Indicate Cubie Example
-
 
 Accessing a Face
 ^^^^^^^^^^^^^^^^
@@ -444,10 +408,6 @@ Because the front face of the RubiksCube has an X value of 0 (regardless of the 
            self.wait()
 
 
-.. .. image:: _static/IndicateFaceExample.gif
-..    :target: _static/IndicateFaceExample.gif
-..    :alt: Indicate Face Example
-
 |
 
 Accessing a Cubie Face
@@ -460,10 +420,10 @@ Just as the cube's ``get_face()`` method works, once you have accessed a Cubie o
 Face Rotations
 --------------
 
-There are currently two ways to do a rotation of the RubiksCube. The recommended way is using the ``CubeMove()`` animation. The second way is with the very well-named ``MoveCube()`` animation. I highly discourage trying to rotate the cube without using these pre-made animations. While possible, It's. Not. Worth. It.
+The recommended way to rotate a face of the RubiksCube is to use the ``CubeMove()`` animation. I highly discourage trying to rotate the cube without using this pre-made animation. While possible, it's not worth it.
 
-CubeMove animation - Recommended
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+CubeMove animation
+^^^^^^^^^^^^^^^^^^
 
 .. manim:: RecommendedMoveExample
 
@@ -493,49 +453,6 @@ CubeMove animation - Recommended
            self.wait()
 
 
-.. .. image:: _static/RecommendedMoveExample.gif
-..    :target: _static/RecommendedMoveExample.gif
-..    :alt: Recommended Move Example
-
-|
-
-MoveCube animation - Less recommended
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. manim:: SecondMoveExample
-
-   from manim_rubikscube import *
-
-   class SecondMoveExample(ThreeDScene):
-       def construct(self):
-           cube = RubiksCube().scale(0.6)
-
-           self.move_camera(phi=50*DEGREES, theta=160*DEGREES)
-           self.renderer.camera.frame_center = cube.get_center()
-
-           self.play(
-               FadeIn(cube)
-           )
-           self.wait()
-
-           # MoveCube() is the 2nd recommended way to animate a move. It functions very similiarly to 
-           # Transform(). It takes a RubiksCube object and the face to rotate. The possible faces
-           # are F, B, U, D, L, and R. To do an inverse move, it is proceeded by a single quote (').
-           # To do a double move, put a "2" after the face to move. This is less preferred than
-           # CubeMove() because double moves will not work as expected (this is a result of how
-           # manim handles a rotate() call). It will also not be as smooth of a rotation as CubeMove().
-           # All three variations are shown:
-           self.play(MoveCube(cube, "F"))
-           self.play(MoveCube(cube, "U2"))
-           self.play(MoveCube(cube, "R'"))
-
-           self.wait()
-
-
-.. .. image:: _static/SecondRecommendedMoveExample.gif
-..    :target: _static/SecondRecommendedMoveExample.gif
-..    :alt: Second Move Example
-
 |
 
 Solving the Cube
@@ -554,7 +471,7 @@ This implementation of a RubiksCube also includes `Kociemba's algorithm <https:/
            cube = RubiksCube()
            print(cube.solve_by_kociemba("BBFBUBUDFDDUURDDURLLLDFRBFRLLFFDLUFBDUBBLFFUDLRRRBLURR"))
 
-Given the state of the Cube, it returned the necessary moves to execute to solve it. All moves returned by the method are able to be read by ``CubeMove()`` or ``MoveCube()``.
+Given the state of the Cube, it returned the necessary moves to execute to solve it. All moves returned by the method are able to be read by ``CubeMove()``.
 
 .. code-block::
 
@@ -594,10 +511,6 @@ Putting it All Together
                Rotating(cube, radians=2*PI, run_time=2)
            )
 
-
-.. .. image:: _static/AllTogetherExample.gif
-..    :target: _static/AllTogetherExample.gif
-..    :alt: All Together Example
 
 |
 
