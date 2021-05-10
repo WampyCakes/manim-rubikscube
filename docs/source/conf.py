@@ -74,9 +74,13 @@ if not os.path.exists('media/videos/480p30'):
     os.makedirs('media/videos/480p30')
 
 # opengraph settings
-ogp_image = "https://github.com/WampyCakes/manim-rubikscube/blob/main/docs/source/_static/logo.png"
+ogp_image = "https://raw.githubusercontent.com/WampyCakes/manim-rubikscube/main/docs/source/_static/logo.png"
 ogp_site_name = "Manim RubiksCube"
 ogp_site_url = "https://manim-rubikscube.readthedocs.io/en/stable/"
+
+ogp_custom_meta_tags = [
+    '<meta property="og:description" content="A Manim implementation of the classic Rubik\'s Cube." />',
+]
 
 # -- Options for HTML output -------------------------------------------------
 
