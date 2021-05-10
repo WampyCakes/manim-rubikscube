@@ -38,9 +38,6 @@ Creating a RubiksCube
 
 .. manim:: FadeInExample
 
-    # Import the RubiksCube plugin after installing
-    from manim_rubikscube import *
-
     class FadeInExample(ThreeDScene):
         def construct(self):
              # After creating the RubiksCube, it may be necessary to scale it to 
@@ -72,8 +69,6 @@ Changing the colors of a RubiksCube
 
 .. manim:: ColorExample
 
-   from manim_rubikscube import *
-
    class ColorExample(ThreeDScene):
        def construct(self):
            # Colors are passed in the order [Up, Right, Front, Down, Left, Back]
@@ -99,8 +94,6 @@ Setting the state of a RubiksCube
 When you have a RubiksCube in real life and want to replicate it in manim, the ``set_state()`` method enables this functionality. Or, if you know the state of any cube without knowing what movements got it to that point, this method allows you to replicate it regardless.
 
 .. manim:: StateExample
-
-   from manim_rubikscube import *
 
    class StateExample(ThreeDScene):
        def construct(self):
@@ -183,8 +176,6 @@ Dimension
 
 .. manim:: TwoDimensionalExample
 
-   from manim_rubikscube import *
-
    class TwoDimensionalExample(ThreeDScene):
        def construct(self):
            # The first parameter the RubiksCube takes is dimension.
@@ -207,8 +198,6 @@ Dimension
 An example of ``set_state()`` on a non-3-dimensional cube:
 
 .. manim:: TwoDimensionalStateExample
-
-   from manim_rubikscube import *
 
    class TwoDimensionalStateExample(ThreeDScene):
        def construct(self):
@@ -237,8 +226,6 @@ An example of ``set_state()`` on a non-3-dimensional cube:
 .. manim:: TenDimensionalExample
     :save_last_frame:
 
-    from manim_rubikscube import *
-
     class TenDimensionalExample(ThreeDScene):
         def construct(self):
             cube = RubiksCube(10).scale(0.2)
@@ -265,8 +252,6 @@ Offsets of 3
 ~~~~~~~~~~~~
 .. manim:: ThreeOffsetExample
 
-    from manim_rubikscube import *
-
     class ThreeOffsetExample(ThreeDScene):
         def construct(self):
             # Passing in 3 for each offset
@@ -289,8 +274,6 @@ y_offset of 4
 ~~~~~~~~~~~~~
 
 .. manim:: YOffsetExample
-
-   from manim_rubikscube import *
 
    class YOffsetExample(ThreeDScene):
        def construct(self):
@@ -352,8 +335,6 @@ So, to access the Cubie at coordinates X=0, Y=0, Z=0, ``cube.cubies[0, 0, 0]`` w
 
 .. manim:: IndicateCubieExample
 
-   from manim_rubikscube import *
-
    class IndicateCubieExample(ThreeDScene):
        def construct(self):
            cube = RubiksCube().scale(0.6)
@@ -383,8 +364,6 @@ The RubiksCube has a method called ``get_face()`` that will return an array of C
 Because the front face of the RubiksCube has an X value of 0 (regardless of the dimension of the cube), returning all Cubies with an X value of 0 will give you the front face. When ``cube.get_face("F")`` is called, it is effectively returning ``cube.cubies[0, :, :]``. This is possible for all 6 faces of the RubiksCube, and it can also be used manually to return more than just one "slice" of a RubiksCube at a time. This is achievable with `numpy indexing <https://numpy.org/doc/stable/reference/arrays.indexing.html>`_.
 
 .. manim:: IndicateFaceExample
-
-   from manim_rubikscube import *
 
    class IndicateFaceExample(ThreeDScene):
        def construct(self):
@@ -425,11 +404,9 @@ The recommended way to rotate a face of the RubiksCube is to use the ``CubeMove(
 CubeMove animation
 ^^^^^^^^^^^^^^^^^^
 
-.. manim:: RecommendedMoveExample
+.. manim:: CubeMoveExample
 
-   from manim_rubikscube import *
-
-   class RecommendedMoveExample(ThreeDScene):
+   class CubeMoveExample(ThreeDScene):
        def construct(self):
            cube = RubiksCube().scale(0.6)
 
@@ -482,9 +459,6 @@ Putting it All Together
 -----------------------
 
 .. manim:: AllTogetherExample
-
-   # Import the RubiksCube plugin
-   from manim_rubikscube import *
 
    class AllTogetherExample(ThreeDScene):
        def construct(self):
