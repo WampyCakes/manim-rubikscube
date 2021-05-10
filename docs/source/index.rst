@@ -3,13 +3,13 @@ Manim RubiksCube
 
 .. .. include:: documentation.rst
 
-This plugin for `Manim Community Edition <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube.
+This plugin for `Manim Community <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube.
 
 Installation
 ============
 
 This plugin is `available on PyPi. <https://pypi.org/project/manim-rubikscube/>`_
-Usage of this plugin assumes that Python and Manim are both correctly installed. Manim is listed as a dependency, but no version is specified. This is because the plugin will work with any version of ManimCE that does not have breaking changes to the plugin. Some releases of this plugin have been tested with certain versions of Manim. To see what versions of Manim are compatible with this plugin, `see Releases. <https://github.com/WampyCakes/manim-rubikscube/releases>`_
+Usage of this plugin assumes that Python and Manim are both correctly installed. Manim is listed as a dependency, but no version is specified. This is because the plugin will work with any version of Manim Community that does not have breaking changes to the plugin. Some releases of this plugin have been tested with certain versions of Manim. To see what versions of Manim are compatible with this plugin, `see Releases. <https://github.com/WampyCakes/manim-rubikscube/releases>`_
 
 To install the RubiksCube plugin run:
 
@@ -33,7 +33,6 @@ Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
 Examples
 ========
 
-|
 
 Creating a RubiksCube
 ---------------------
@@ -631,7 +630,7 @@ Acknowledgments
 ===============
 
 
-* `XorUnison's <https://github.com/XorUnison>`_ Honeycomb mobject is an upcoming feature in `Manim Community Edition <https://github.com/ManimCommunity/manim>`__. This RubiksCube plugin takes advantage of Honeycomb's ``transform_tile()`` method and offset implementation. Until it is added to ManimCE, the best way to see Honeycomb is `through his videos on Tiling <https://www.youtube.com/user/XorUnison/videos>`_\ , the 2D version of Honeycomb. 
+* `XorUnison's <https://github.com/XorUnison>`_ Honeycomb mobject is an upcoming feature in `Manim Community <https://github.com/ManimCommunity/manim>`__. This RubiksCube plugin takes advantage of Honeycomb's ``transform_tile()`` method and offset implementation. Until it is added to Manim Community, the best way to see Honeycomb is `through his videos on Tiling <https://www.youtube.com/user/XorUnison/videos>`_\ , the 2D version of Honeycomb. 
 * `Herbert Kociemba's Two Phase Rubik's Cube Solving Algorithm <https://github.com/hkociemba/RubiksCube-TwophaseSolver>`_
 
 License
