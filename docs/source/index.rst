@@ -284,6 +284,7 @@ A RubiksCube has three different offset values. Offsets can be useful for isolat
 * The :code:`z_offset` determines how close/far Cubies are from Top to Bottom
 
 The default value for all three offsets is :code:`2.1`. Adjusting these offsets changes the "gap" between Cubies
+
 |
 
 Offsets of 3
@@ -455,6 +456,7 @@ Accessing a Cubie Face
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Just as the cube's ``get_face()`` method works, once you have accessed a Cubie object, you can call ``get_face(face)``. For example, calling ``cube.cubies[0, 0, 0].get_face("F")`` will return the front face of that cubie as a ``Square()`` mobject. If the ``get_face()`` method returns a different square than you expected, it is likely a result of the RubiksCube's or the camera's orientation changing your perspective of direction in the scene.
+
 |
 
 Face Rotations

@@ -77,10 +77,7 @@ if not os.path.exists('media/videos/480p30'):
 ogp_image = "https://raw.githubusercontent.com/WampyCakes/manim-rubikscube/main/docs/source/_static/logo.png"
 ogp_site_name = "Manim RubiksCube"
 ogp_site_url = "https://manim-rubikscube.readthedocs.io/en/stable/"
-
-ogp_custom_meta_tags = [
-    '<meta property="og:description" content="A Manim implementation of the classic Rubik\'s Cube." />',
-]
+ogp_description_length = 95
 
 # -- Options for HTML output -------------------------------------------------
 
