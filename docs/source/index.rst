@@ -1,7 +1,6 @@
 Manim RubiksCube
 ============================================
 
-.. .. include:: documentation.rst
 
 This plugin for `Manim Community <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube.
 
@@ -9,7 +8,7 @@ Installation
 ============
 
 This plugin is `available on PyPi. <https://pypi.org/project/manim-rubikscube/>`_
-Usage of this plugin assumes that Python and Manim are both correctly installed. Manim is listed as a dependency, but no version is specified. This is because the plugin will work with any version of Manim Community that does not have breaking changes to the plugin. Some releases of this plugin have been tested with certain versions of Manim. To see what versions of Manim are compatible with this plugin, `see Releases. <https://github.com/WampyCakes/manim-rubikscube/releases>`_
+Usage of this plugin assumes that Python and Manim are both correctly installed. Manim is listed as a dependency, but no version is specified. This is because the plugin will work with any version of Manim Community that does not have breaking changes to the plugin. Some releases of this plugin have been tested with certain versions of Manim. To see what versions of Manim are confirmed to be compatible with this plugin (to the best of my testing), `see Releases. <https://github.com/WampyCakes/manim-rubikscube/releases>`_ By no means is this exclusive. Most releases of this plugin will work, more or less, on all versions of Manim Community.
 
 To install the RubiksCube plugin run:
 
@@ -17,7 +16,7 @@ To install the RubiksCube plugin run:
 
    pip install manim-rubikscube
 
-Alternatively, the Github repository can be cloned and imported to your manim scripts as normal. Currently, this option will give import errors, but these errors can be manually fixed after cloning.
+Alternatively, the Github repository can be cloned and imported to your manim scripts as normal.
 
 Importing
 =========
@@ -25,10 +24,10 @@ Importing
 To use the RubiksCube, you can either:
 
 
-* ``from manim_rubikscube import *``
-* Follow the `Manim steps for using plugins <https://docs.manim.community/en/latest/installation/plugins.html#using-plugins-in-projects>`_
+* Add ``from manim_rubikscube import *`` to your script
+* Follow the `Manim steps for using plugins <https://docs.manim.community/en/stable/installation/plugins.html#using-plugins-in-projects>`_
 
-Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
+Once the RubiksCube is imported, you can use the RubiksCube as any other mobject.
 
 Examples
 ========

@@ -77,7 +77,7 @@ if not os.path.exists('media/videos/480p30'):
 ogp_image = "https://raw.githubusercontent.com/WampyCakes/manim-rubikscube/main/docs/source/_static/logo.png"
 ogp_site_name = "Manim RubiksCube"
 ogp_site_url = "https://manim-rubikscube.readthedocs.io/en/stable/"
-ogp_description_length = 90
+ogp_description_length = 89
 
 # -- Options for HTML output -------------------------------------------------
 
