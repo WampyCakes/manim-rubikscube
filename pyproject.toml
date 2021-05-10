@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "manim-rubikscube"
 version = "0.1.0"
-description = "A Manim implementation of a Rubik's Cube"
+description = "A Manim implementation of the classic Rubik's Cube"
 license = "GNU General Public License v3 (GPLv3)"
 authors = ["KingWampy <fake-noreply@email.com>"]
 readme = "README.rst"

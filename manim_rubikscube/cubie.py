@@ -5,6 +5,8 @@ from manim.utils.space_ops import z_to_vector
 from manim.mobject.geometry import Square
 from .cube_utils import get_faces_of_cubie
 
+import numpy as np
+
 class Cubie(VGroup):
     position = np.array
     # old_position = np.array
