@@ -32,3 +32,7 @@ Once the RubiksCube is imported, you can use the RubiksCube as any other mobject
 Documentation and Examples
 ==========================
 Documentation and examples are `available here. <https://manim-rubikscube.readthedocs.io/en/stable/>`_
+
+License
+=======
+This plugin is licensed under the MIT license. See the ``LICENSE`` file for more information.
