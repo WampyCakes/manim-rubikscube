@@ -68,7 +68,7 @@ from manim_rubikscube import *
 
 classnamedict = {}
 
-# 
+
 class skip_manim_node(nodes.Admonition, nodes.Element):
     pass
 
