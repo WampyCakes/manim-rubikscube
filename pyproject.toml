@@ -16,7 +16,7 @@ packages = [
 [tool.poetry.dependencies]
 manim = "*"
 importlib-metadata = {version = "*", python = "<3.8"}
-kociemba = { git = "https://github.com/WampyCakes/kociemba.git", branch = "troubleshooting" }
+kociemba = { git = "https://github.com/WampyCakes/kociemba.git", branch = "main" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -522,15 +522,7 @@ Acknowledgments
 License
 =======
 
-This plugin is licensed under the GPLv3.0 license (\ `see LICENSE file <https://github.com/WampyCakes/manim-rubikscube/blob/main/LICENSE>`_\ ) due to the incorporation of Kociemba's algorithm.
-
-As per the license, changes made to Kociemba's source are:
-
-
-* Removed anything unnecessary such as examples, GUI, vision, and server files
-* Commented out print statements
-* Changed import statements
-* Changed the way tables are written and read to be OS-independent (avoiding ``EOFError: read() didn't return enough bytes``)
+This plugin is licensed under the MIT license (\ `see LICENSE file <https://github.com/WampyCakes/manim-rubikscube/blob/main/LICENSE>`_\ ).
 
 
 .. .. toctree::
