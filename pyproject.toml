@@ -13,7 +13,7 @@ packages = [
 [tool.poetry.plugins]
 [tool.poetry.plugins."manim.plugins"]
 [tool.poetry.plugins."console_scripts"]
-"manim_rubikscube" = "manim_rubikscube.__main__"
+"manim_rubikscube" = "manim_rubikscube.__main__:main"
 
 [tool.poetry.dependencies]
 manim = "*"
