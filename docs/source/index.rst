@@ -2,7 +2,7 @@ Manim RubiksCube
 ============================================
 
 
-This plugin for `Manim Community <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube.
+This plugin for `Manim Community <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube. This project is open source `(available on GitHub) <https://github.com/WampyCakes/manim-rubikscube>`_.
 
 Installation
 ============
@@ -504,13 +504,13 @@ To do
 * Clean the code
 * and much more!
 
-Release Notes
-=============
+.. Release Notes
+.. =============
 
 
-* 0.1.0
+.. * 0.1.0
 
-  * Initial release
+..   * Initial release
 
 Acknowledgments
 ===============
