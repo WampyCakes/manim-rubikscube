@@ -18,6 +18,20 @@ To install the RubiksCube plugin run:
 
 Alternatively, the Github repository can be cloned and imported to your manim scripts as normal.
 
+|
+
+To see what version of manim-rubikscube you are running:
+
+.. code-block::
+
+    manim-rubikscube
+
+or
+
+.. code-block::
+
+    pip list
+
 Importing
 =========
 
