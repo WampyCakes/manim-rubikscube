@@ -1,8 +1,8 @@
 from . import __version__
 
-console.print(f"Manim RubiksCube [green]v{__version__}[/green]\n")
+print(f"Manim RubiksCube v{__version__}\n")
 
-def main(ctx):
+def main():
     pass
 
 if __name__ == "__main__":
