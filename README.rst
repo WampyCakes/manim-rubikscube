@@ -16,8 +16,6 @@ To install the RubiksCube plugin run:
 
    pip install manim-rubikscube
 
-Alternatively, the `Github repository <https://github.com/WampyCakes/manim-rubikscube>`_ can be cloned and imported to your manim scripts as normal.
-
 Importing
 =========
 
