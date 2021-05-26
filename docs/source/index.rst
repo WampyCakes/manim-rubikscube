@@ -102,7 +102,7 @@ Changing the colors of a RubiksCube
 Setting the state of a RubiksCube
 ---------------------------------
 
-When you have a RubiksCube in real life and want to replicate it in manim, the ``set_state()`` method enables this functionality. Or, if you know the state of any cube without knowing what movements got it to that point, this method allows you to replicate it regardless.
+When you have a RubiksCube in real life and want to replicate it in manim, the ``set_state()`` method enables this functionality. Or, if you know the state of any cube without knowing what movements got it to that point, this method allows you to also replicate that.
 
 .. manim:: StateExample
 
@@ -174,7 +174,7 @@ Properties of a RubiksCube
 
 ..
 
-   :strong:`Note:`  It is not necessary to pass any parameters to the RubiksCube. Doing so is entirely for additional functionality and personal tweaks.
+   :strong:`Note:`  It is not necessary to pass any parameters to the RubiksCube. Doing so is entirely for additional functionality and stylistic tweaks.
 
 
 To this point, we have seen that one property of a RubiksCube is a list of colors for the cube faces. There are currently two other parameters that can be passed.
@@ -213,6 +213,8 @@ An example of ``set_state()`` on a non-3-dimensional cube:
    class TwoDimensionalStateExample(ThreeDScene):
        def construct(self):
            cube = RubiksCube(2).scale(0.6)
+           # Notice how there are fewer characters in the string compared
+           # to the 3-dimensional cube because there are less cubie faces to display
            cube.set_state("RUFBLLBDRDDBRUUDLFFBFRLU")
 
            self.move_camera(phi=50*DEGREES, theta=160*DEGREES)
@@ -272,7 +274,7 @@ Offsets of 3
             self.renderer.camera.frame_center = cube.get_center()
 
             self.play(
-                ShowCreation(cube)
+                FadeIn(cube)
             )
 
             self.begin_ambient_camera_rotation(rate=0.5)
@@ -451,7 +453,6 @@ This implementation of a RubiksCube also includes `Kociemba's algorithm <https:/
 .. code-block:: python
 
    from manim import *
-
    from manim_rubikscube import *
 
    class SolveExample(ThreeDScene):

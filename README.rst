@@ -12,9 +12,22 @@ Usage of this plugin assumes that Python and Manim are both correctly installed.
 
 To install the RubiksCube plugin run:
 
-.. code-block::
+.. code-block:: bash
 
    pip install manim-rubikscube
+
+
+To see what version of manim-rubikscube you are running:
+
+.. code-block:: bash
+
+    manim-rubikscube
+
+or
+
+.. code-block:: bash
+
+    pip list
 
 Importing
 =========
