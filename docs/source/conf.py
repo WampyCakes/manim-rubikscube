@@ -17,6 +17,8 @@ from distutils.sysconfig import get_python_lib
 import manim
 from manim_rubikscube import __version__
 
+version = "0.2.0beta"#__version__
+
 sys.path.insert(0, os.path.abspath('.'))
 
 if os.environ.get("READTHEDOCS") == "True":
@@ -39,7 +41,7 @@ copyright = '2021, KingWampy'
 author = 'KingWampy'
 
 # The full version, including alpha/beta/rc tags
-release = "0.2.0beta"#__version__
+release = version
 
 
 # -- General configuration ---------------------------------------------------
@@ -81,7 +83,7 @@ ogp_description_length = 89
 
 # -- Options for HTML output -------------------------------------------------
 
-html_title = f"Manim RubiksCube v{__version__}"
+html_title = f"Manim RubiksCube v{version}"
 html_theme = 'furo'
 html_logo = '_static/logo.png'
 html_favicon = '_static/logo.ico'
