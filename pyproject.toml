@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "manim-rubikscube"
-version = "0.1.0"
+version = "latest"
 description = "A Manim implementation of the classic Rubik's Cube"
 license = "MIT"
 authors = ["KingWampy <fake-noreply@email.com>"]
