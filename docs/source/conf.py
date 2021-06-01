@@ -39,7 +39,7 @@ copyright = '2021, KingWampy'
 author = 'KingWampy'
 
 # The full version, including alpha/beta/rc tags
-release = __version__
+release = "0.2.0beta"#__version__
 
 
 # -- General configuration ---------------------------------------------------
