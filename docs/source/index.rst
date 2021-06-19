@@ -56,7 +56,7 @@ Creating a RubiksCube
              cube = RubiksCube().scale(0.6) 
 
              # Setup where the camera looks
-             self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+             self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
              self.renderer.camera.frame_center = cube.get_center()
 
              # At this point, you have created a RubiksCube object.
@@ -86,7 +86,7 @@ Changing the colors of a RubiksCube
            # Default is [WHITE, "#B90000", "#009B48", "#FFD500", "#FF5900", "#0045AD"]
            cube = RubiksCube(colors=[WHITE, ORANGE, DARK_BLUE, YELLOW, PINK, "#00FF00"]).scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -156,7 +156,7 @@ When you have a RubiksCube in real life and want to replicate it in manim, the `
 
            cube.set_state("BBFBUBUDFDDUURDDURLLLDFRBFRLLFFDLUFBDUBBLFFUDLRRRBLURR")
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -193,7 +193,7 @@ Dimension
            # Alternatively, dim=2 can be passed. Default dim is 3
            cube = RubiksCube(2).scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -217,7 +217,7 @@ An example of ``set_state()`` on a non-3-dimensional cube:
            # to the 3-dimensional cube because there are less cubie faces to display
            cube.set_state("RUFBLLBDRDDBRUUDLFFBFRLU")
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -242,7 +242,7 @@ An example of ``set_state()`` on a non-3-dimensional cube:
     class TenDimensionalExample(ThreeDScene):
         def construct(self):
             cube = RubiksCube(10).scale(0.2)
-            self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+            self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
             self.renderer.camera.frame_center = cube.get_center()
 
             self.add(cube)
@@ -270,7 +270,7 @@ Offsets of 3
             # Passing in 3 for each offset
             cube = RubiksCube(x_offset=3, y_offset=3, z_offset=3).scale(0.5)
 
-            self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+            self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
             self.renderer.camera.frame_center = cube.get_center()
 
             self.play(
@@ -293,7 +293,7 @@ y_offset of 4
            # Only setting the y_offset
            cube = RubiksCube(y_offset=4).scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -352,7 +352,7 @@ So, to access the Cubie at coordinates X=0, Y=0, Z=0, ``cube.cubies[0, 0, 0]`` w
        def construct(self):
            cube = RubiksCube().scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -382,7 +382,7 @@ Because the front face of the RubiksCube has an X value of 0 (regardless of the 
        def construct(self):
            cube = RubiksCube().scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -423,7 +423,7 @@ CubeMove animation
        def construct(self):
            cube = RubiksCube().scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            self.play(
@@ -477,7 +477,7 @@ Putting it All Together
            # Change the cube from default colors
            cube = RubiksCube(colors=[WHITE, ORANGE, DARK_BLUE, YELLOW, PINK, "#00FF00"]).scale(0.6)
 
-           self.set_camera_orientation(phi=50DEGREES, theta=160DEGREES)
+           self.set_camera_orientation(phi=50*DEGREES, theta=160*DEGREES)
            self.renderer.camera.frame_center = cube.get_center()
 
            # Set the state of the cube
