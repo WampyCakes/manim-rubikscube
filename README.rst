@@ -4,6 +4,10 @@ Manim RubiksCube
 
 This plugin for `Manim Community <https://www.manim.community/>`_ provides an implementation of the classic Rubik's Cube.
 
+NOTE
+====
+Wonder how Manim RubiksCube looks so much better in `this video <https://www.youtube.com/watch?v=xMY0mPPY25k>`_ than my docs and examples show? I have made a lot of technical upgrades and aesthetic updates to the plugin locally that are not yet ready for GitHub or a new release. Stay patient for the update! Until then, you can locally edit manim-rubikscube yourself to replicate the aesthetics I have in this video, if you so desire. 
+
 Installation
 ============
 
