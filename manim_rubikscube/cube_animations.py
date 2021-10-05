@@ -22,7 +22,7 @@ class CubeMove(Animation):
         self.mobject.become(self.starting_mobject)
         
         VGroup(*self.mobject.get_face(self.face[0])).rotate(
-            alpha * self.angle,
+            self.rate_func(alpha) * self.angle,
             self.axis
         )
 
