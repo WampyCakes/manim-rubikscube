@@ -5,7 +5,12 @@ from .cube_utils import get_axis_from_face
 
 class CubeMove(Animation):
     def __init__(self, mobject, face, **kwargs):
-        self.axis = get_axis_from_face(face[0])
+        # Compute the axis of rotation by taking the vector from the cube's center
+        # to the middle cubie of the rotated face
+        self.axis = (
+            mobject.get_face(face[0], flatten=False)[1, 1].get_center()
+            - mobject.get_center()
+        )
         self.face = face
         self.angle = PI/2 if ("R" in face or "F" in face or "D" in face) else -PI/2
         self.angle = self.angle if "2" not in face else self.angle*2
