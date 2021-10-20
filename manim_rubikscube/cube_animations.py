@@ -38,11 +38,9 @@ class CubeMove(Animation):
 
     def finish(self):
         super().finish()
-        # self.mobject.adjust_indices(self.mobject.get_face(self.face[0], False))
         cubies = self.mobject.cubies[self.mobject.get_face_slice(self.face[0])]
 
         # We need to make sure that moves that are supposed to be clockwise really are
-        # n_turns = -self.n_turns if (self.face[0] in {"L", "F", "D"}) else self.n_turns
         n_turns = self.n_turns if (self.face[0] in {"L", "F", "D"}) else -self.n_turns
 
         # Get to a non-negative value
