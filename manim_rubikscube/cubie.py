@@ -32,7 +32,6 @@ class Cubie(VGroup):
     #     self.position = position
 
     def get_rounded_center(self):
-        #TODO: Switch from using center to cubie positions
         return tuple([round(self.get_x(), 3), round(self.get_y(), 3), round(self.get_z(), 3)])
 
     def generate_points(self):
@@ -85,3 +84,6 @@ class Cubie(VGroup):
             opacity=self.background_stroke_opacity,
             family=False
         )
+    
+    def __repr__(self):
+        return "Cubie({})".format(self.get_rounded_center())
