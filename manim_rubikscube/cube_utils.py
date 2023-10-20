@@ -1,16 +1,5 @@
 from manim.constants import *
 
-def get_axis_from_face(face):
-    if face == "F" or face == "B":
-        return X_AXIS
-    elif face == "U" or face == "D":
-        return Z_AXIS
-    else:
-        return Y_AXIS
-
-def get_direction_from_face(face):
-    #Clockwise/counterclockwise for each face. UP goes cw?
-    return
 
 def get_type_of_cubie(dim, position):
     if (position[1] == 0 or position[1] == dim-1) and (position[2] == 0 or position[2] == dim-1):
